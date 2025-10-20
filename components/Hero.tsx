@@ -1,15 +1,15 @@
 import React from 'react';
+import mainImage from '../images/main.jpg';
 
 const Hero: React.FC = () => {
   // USER: After deploying, place your image in a public-accessible folder
   // and replace this URL with the path to your image, for example: '/my-photo.jpg'.
-  const portraitImageUrl = 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop';
+  const portraitImageUrl = mainImage;
 
   return (
     <main className="flex-grow w-full text-white flex items-center">
       <div className="max-w-7xl mx-auto px-8 md:px-12 lg:px-24 w-full">
         <div className="flex flex-col-reverse md:flex-row items-center justify-center gap-8 lg:gap-16">
-          
           {/* Left side for Text (Constrained width) */}
           <div className="w-full md:w-1/2 lg:w-5/12 text-center md:text-left flex-shrink-0">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-sans font-bold">
@@ -30,11 +30,12 @@ const Hero: React.FC = () => {
 
           {/* Right side for Image */}
           <div className="w-full md:w-1/2 lg:w-7/12 flex justify-center">
-             <div className="relative w-80 h-80 sm:w-96 sm:h-96 md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] bg-white/10 rounded-full p-2">
-              <img 
-                src={portraitImageUrl} 
+            <div className="relative w-80 h-80 sm:w-96 sm:h-96 md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] rounded-full overflow-hidden border-4 border-white/10 bg-black/60 shadow-[0_0_40px_rgba(0,0,0,0.6)]">
+              <img
+                src={portraitImageUrl}
                 alt="Portrait of HariKrishnan"
-                className="w-full h-full object-cover rounded-full"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: 'center 35%' }}
               />
             </div>
           </div>

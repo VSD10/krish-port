@@ -1,4 +1,5 @@
 import React from 'react';
+import aboutImage from '../images/about.jpg';
 
 // Data for the new sections
 const education = {
@@ -37,56 +38,54 @@ const Card: React.FC<{ children: React.ReactNode; className?: string }> = ({ chi
 );
 
 const About: React.FC = () => {
-  const portraitImageUrl = "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1974&auto=format&fit=crop";
+  const portraitImageUrl = aboutImage;
 
   return (
-    <main className="flex-grow w-full text-white overflow-y-auto">
+    <main className="flex-grow w-full text-white overflow-y-auto pt-32 md:pt-40">
       <div className="max-w-7xl mx-auto">
         {/* --- Top Section: Image + Bio --- */}
-        <div className="min-h-screen flex items-center justify-center px-8 md:px-12 lg:px-24 py-20">
-            <div className="flex flex-col md:flex-row items-center gap-12 w-full">
-                
-                {/* Left side for Image */}
-                <div className="w-full md:w-1/3 flex-shrink-0">
-                    <div className="bg-white/10 rounded-full w-full max-w-xs mx-auto aspect-square p-2">
-                        <img
-                          src={portraitImageUrl}
-                          alt="Portrait of HariKrishnan"
-                          className="w-full h-full object-cover rounded-full"
-                        />
-                    </div>
-                </div>
-
-                {/* Right side for Content */}
-                <div className="w-full md:w-2/3 text-center md:text-left">
-                    <h1 className="text-8xl sm:text-9xl lg:text-[10rem] font-display uppercase tracking-wide leading-none">
-                        HELLO<span className="text-orange-500">!</span>
-                    </h1>
-                    <p className="mt-8 text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl">
-                        Aspiring management professional with a B.Tech in Computer Science and Business Systems, passionate about bridging technology and business strategy. Skilled in leveraging data, innovation, and consumer-focused research to solve business challenges. Eager to develop expertise in management principles, brand strategy, and luxury business, strategic thinking, and cross-cultural insights.
-                    </p>
-                    <div className="mt-12 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4">
-                        <a 
-                          href="https://www.linkedin.com/in/hkrish18" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="bg-orange-500 text-black font-semibold py-4 px-10 rounded-full transition-transform transform hover:scale-105 text-lg"
-                        >
-                          www.linkedin.com/in/hkrish18
-                        </a>
-                        <a 
-                          href="mailto:harikrish142005@gmail.com"
-                          className="bg-orange-500 text-black font-semibold py-4 px-10 rounded-full transition-transform transform hover:scale-105 text-lg"
-                        >
-                          harikrish142005@gmail.com
-                        </a>
-                    </div>
-                </div>
+        <div className="flex flex-col md:flex-row items-center gap-12 w-full">
+          {/* Left side for Image */}
+          <div className="w-full md:w-1/3 flex-shrink-0">
+            <div className="w-full max-w-xs mx-auto aspect-square rounded-full overflow-hidden border-4 border-white/10 bg-black/60 shadow-[0_0_30px_rgba(0,0,0,0.6)]">
+              <img
+                src={portraitImageUrl}
+                alt="Portrait of HariKrishnan"
+                className="w-full h-full object-cover"
+                style={{ objectPosition: 'center 32%' }}
+              />
             </div>
+          </div>
+
+          {/* Right side for Content */}
+          <div className="w-full md:w-2/3 text-center md:text-left">
+            <h1 className="text-8xl sm:text-9xl lg:text-[10rem] font-display uppercase tracking-wide leading-none">
+              HELLO<span className="text-orange-500">!</span>
+            </h1>
+            <p className="mt-8 text-xl md:text-2xl text-gray-300 leading-relaxed max-w-3xl">
+              Aspiring management professional with a B.Tech in Computer Science and Business Systems, passionate about bridging technology and business strategy. Skilled in leveraging data, innovation, and consumer-focused research to solve business challenges. Eager to develop expertise in management principles, brand strategy, and luxury business, strategic thinking, and cross-cultural insights.
+            </p>
+            <div className="mt-12 flex flex-col sm:flex-row items-center justify-center md:justify-start gap-4 mb-12">
+              <a
+                href="https://www.linkedin.com/in/hkrish18"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-orange-500 text-black font-semibold py-4 px-10 rounded-full transition-transform transform hover:scale-105 text-lg"
+              >
+                www.linkedin.com/in/hkrish18
+              </a>
+              <a
+                href="mailto:harikrish142005@gmail.com"
+                className="bg-orange-500 text-black font-semibold py-4 px-10 rounded-full transition-transform transform hover:scale-105 text-lg"
+              >
+                harikrish142005@gmail.com
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* --- Grid Section --- */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 md:px-12 lg:px-24 pb-20">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 px-8 md:px-12 lg:px-24 pb-20">
           
           {/* Column 1: Technical Skills & Language */}
           <div className="flex flex-col gap-8">
